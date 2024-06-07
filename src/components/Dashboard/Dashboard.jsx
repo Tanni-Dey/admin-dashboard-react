@@ -8,6 +8,7 @@ import { IoIosArrowForward, IoIosArrowDown } from "react-icons/io";
 
 const Dashboard = () => {
   const [isShowDropdown, setIsShowDropdown] = useState(false);
+  const [isShowLeftSideBar, setIsShowLeftSideBar] = useState(false);
   const navlinks = [
     { id: 1, tittle: "Charts", icon: <IoStatsChartSharp /> },
     {
@@ -19,11 +20,11 @@ const Dashboard = () => {
   ];
   return (
     <div className="grid grid-cols-5">
-      <div className="col-span-1 bg-slate-950">
+      <div className="col-span-1 bg-slate-950 ">
         <div className=" h-screen w-1/5 text-white fixed">
           <div className="flex justify-between  p-5 border-b border-slate-900 ">
             <img className=" h-7 w-7" src={logo} alt="logo" />
-            <button className="btn p-3 rounded-lg bg-slate-900  flex justify-center items-center">
+            <button className="btn p-3 rounded-lg bg-slate-900   justify-center items-center hidden md:flex">
               <span>
                 <LuLayoutDashboard />
               </span>
@@ -38,7 +39,7 @@ const Dashboard = () => {
                 >
                   <span className="flex items-center">
                     <span className="pr-2">{navlink.icon}</span>
-                    {navlink.tittle}
+                    <span className="hidden md:inline">{navlink.tittle}</span>
                   </span>
                   {navlink.dropdown && (
                     <button onClick={() => setIsShowDropdown(!isShowDropdown)}>
@@ -64,7 +65,7 @@ const Dashboard = () => {
           </ul>
         </div>
       </div>
-      <div className=" col-span-4 bg-slate-200">
+      <div className="col-span-4 bg-slate-200">
         <ChartsPage />
       </div>
     </div>

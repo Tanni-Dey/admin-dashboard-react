@@ -54,7 +54,7 @@ const Table = () => {
     },
   ];
   return (
-    <div className="p-5 bg-white rounded-lg">
+    <div className="p-5 bg-white rounded-lg overflow-x-auto ">
       <div className="flex items-center justify-between mb-4">
         <h3 className="text-xs font-semibold text-blue-500 bg-blue-100 py-1 px-2 rounded-sm">
           Our Total Sold
@@ -63,7 +63,7 @@ const Table = () => {
           <LuLayoutDashboard />
         </button>
       </div>
-      <table className="table-auto w-full text-left">
+      <table className="table-auto w-full text-left text-xs md:text-lg">
         <thead>
           <tr>
             <th className="text-2xl">Best Seller</th>
@@ -80,7 +80,7 @@ const Table = () => {
             <tr key={index}>
               <td className="flex items-center font-semibold mt-5">
                 <img
-                  className="rounded-full h-10 w-10 mr-2"
+                  className="rounded-full h-10 w-10 mr-2 hidden md:block"
                   src={tableRow.userImg}
                   alt=""
                 />

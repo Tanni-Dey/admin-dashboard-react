@@ -155,7 +155,7 @@ const ChartsCard = () => {
   ];
 
   return (
-    <div className="grid grid-cols-3 gap-5 mb-5">
+    <div className="grid grid-cols-2 md:grid-cols-3 gap-5 mb-5">
       {allData.map((data, index) => (
         <div key={index} className="p-5 bg-white rounded-lg">
           <div className="flex items-center justify-between pb-10 ">

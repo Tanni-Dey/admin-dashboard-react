@@ -7,12 +7,12 @@ const ChartsPage = () => {
   return (
     <div className="p-5">
       <Navbar />
-      <div className="grid grid-cols-4 gap-5">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-5">
         <div className="col-span-3">
           <ChartsCard />
           <Table />
         </div>
-        <div className="col-span-1">
+        <div className="col-span-4 md:col-span-1">
           <SidebarTable />
         </div>
       </div>
